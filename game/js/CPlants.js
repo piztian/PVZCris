@@ -942,7 +942,7 @@ var oPeashooter = InheritO(CPlants, {
 	width: 71,
 	height: 71,
 	beAttackedPointR: 51,
-	SunNum: 100,
+	SunNum: 10,
 	BKind: 0,
 	AudioArr: ["splat1", "splat2", "splat3", "plastichit", "shieldhit", "shieldhit2"],
 	PicArr: [
@@ -1084,7 +1084,7 @@ var oLotusRoot = InheritO(oPeashooter, {
 	width: 130,
 	height: 114,
 	beAttackedPointR: 70,
-	SunNum: 250,
+	SunNum: 50,
 	BookHandBack: 4.9,
 	coolTime: 25,
 	getShadow(a) {
