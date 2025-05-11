@@ -1351,7 +1351,7 @@ var oRepeater = InheritO(oPeashooter, {
 	width: 73,
 	height: 71,
 	beAttackedPointR: 53,
-	SunNum: 200,
+	SunNum: 20,
 	PicArr: [
 		"images/Card/Plants/Repeater.png",
 		"images/Plants/Repeater/0.gif",
@@ -2377,7 +2377,7 @@ var oPotatoMine = InheritO(CPlants, {
 	height: 55,
 	beAttackedPointR: 55,
 	SunNum: 25,
-	coolTime: 30,
+	coolTime: 3,
 	Stature: -1,
 	HP: 1e3,
 	CanGrow(c, b, e) {
@@ -3784,7 +3784,7 @@ var oSeedCherryBomb = InheritO(CPlants, {
 	height: 81,
 	beAttackedPointR: 92,
 	SunNum: 0,
-	coolTime: 20,
+	coolTime: 2,
 	PicArr: [
 		"images/Card/Plants/CherryBomb.png",
 		"images/Plants/CherryBomb/0.gif",
