@@ -1290,7 +1290,7 @@ var oSeedSnowPea = InheritO(oPeashooter, {
 var oSnowRepeater = InheritO(oSnowPea, {
 	EName: "oSnowRepeater",
 	CName: "Snow Repeater",
-	SunNum: 250,
+	SunNum: 50,
 	PicArr: [
 		"images/Card/Plants/SnowRepeater.png",
 		"images/Plants/SnowRepeater/0.gif",
@@ -1505,7 +1505,7 @@ var oThreepeater = InheritO(oPeashooter, {
 	width: 73,
 	height: 80,
 	beAttackedPointR: 53,
-	SunNum: 325,
+	SunNum: 50,
 	PicArr: [
 		"images/Card/Plants/Threepeater.png",
 		"images/Plants/Threepeater/0.gif",
