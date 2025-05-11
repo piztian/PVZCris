@@ -1992,7 +1992,7 @@ var oSunFlower = InheritO(CPlants, {
 							);
 
 							// Schedule next sun production
-							oSym.addTask(2400, callback, [id, posX, posY]);
+							oSym.addTask(400, callback, [id, posX, posY]);
 						},
 						[plantId, x, y, produceSun]
 					);
