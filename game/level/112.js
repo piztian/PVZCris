@@ -146,10 +146,11 @@ oS.Init(
 						(function () {
 							var a = ArCard.length;
 							if (a < 15) {
-								// Mantén un índice para el orden de las plantas
-								if (typeof window.plantIndex === "undefined") {
-    									window.plantIndex = 0;
-									}
+								var c = oS.PName;
+								var b =
+									Math.random() < 0.6
+        									? c.indexOf(oFlowerPot) // 60% de probabilidad de ser maceta
+       		 								: Math.floor(Math.random() * c.length);
 
 								// Selecciona la planta en orden y reinicia cuando llegue al final
 								var b = window.plantIndex;
