@@ -141,57 +141,56 @@ oS.Init(
 			SetHidden($("dSunNum"));
 			oS.InitLawnMower();
 			PrepareGrowPlants(() => {
-				oP.Monitor({
-					f() {
-						(function () {
-							var a = ArCard.length;
-							if (a < 10) {
-								var c = oS.PName;
-								var b =
-									oP.FlagZombies < 6
-										? Math.floor(1 + Math.random() * 10) < 4
-											? 1
-											: Math.floor(Math.random() * c.length)
-										: Math.floor(1 + Math.random() * 10) < 3
-											? 0
-											: Math.floor(Math.random() * c.length);
-								var e = c[b];
-								var d = e.prototype;
-								var f = "dCard" + Math.random();
-								ArCard[a] = { DID: f, PName: e, PixelTop: 600 };
-								NewImg(
-									f,
-									d.PicArr[d.CardGif],
-									"top:600px;width:100px;height:120px;cursor:url(images/interface/Pointer.cur),pointer;clip:rect(auto,auto,60px,auto)",
-									$("dCardList"),
-									{
-										onmouseover(g) {
-											ViewPlantTitle(GetChoseCard(f), g);
-										},
-										onmouseout() {
-											SetHidden($("dTitle"));
-										},
-										onclick(g) {
-											ChosePlant(g, oS.ChoseCard, f);
-										},
-									}
-								);
-							}
-							oSym.addTask(600, arguments.callee, []);
-						})();
-						(function () {
-							var b = ArCard.length;
-							var a;
-							var c;
-							while (b--) {
-								(c = (a = ArCard[b]).PixelTop) > 60 * b && ($(a.DID).style.top = (a.PixelTop = c - 1) + "px");
-							}
-							oSym.addTask(5, arguments.callee, []);
-						})();
-					},
-					ar: [],
-				});
-				oP.AddZombiesFlag();
+    oP.Monitor({
+        f() {
+            (function () {
+                var a = ArCard.length;
+                if (a < 10) {
+                    var c = oS.PName;
+                    
+                    // Incrementa la probabilidad de macetas (oFlowerPot)
+                    var b = Math.random() < 0.6 ? c.indexOf(oFlowerPot) : Math.floor(Math.random() * c.length);
+                    
+                    var e = c[b];
+                    var d = e.prototype;
+                    var f = "dCard" + Math.random();
+                    ArCard[a] = { DID: f, PName: e, PixelTop: 600 };
+                    NewImg(
+                        f,
+                        d.PicArr[d.CardGif],
+                        "top:600px;width:100px;height:120px;cursor:url(images/interface/Pointer.cur),pointer;clip:rect(auto,auto,60px,auto)",
+                        $("dCardList"),
+                        {
+                            onmouseover(g) {
+                                ViewPlantTitle(GetChoseCard(f), g);
+                            },
+                            onmouseout() {
+                                SetHidden($("dTitle"));
+                            },
+                            onclick(g) {
+                                ChosePlant(g, oS.ChoseCard, f);
+                            },
+                        }
+                    );
+                }
+                oSym.addTask(600, arguments.callee, []);
+            })();
+
+            (function () {
+                var b = ArCard.length;
+                var a;
+                var c;
+                while (b--) {
+                    (c = (a = ArCard[b]).PixelTop) > 60 * b && ($(a.DID).style.top = (a.PixelTop = c - 1) + "px");
+                }
+                oSym.addTask(5, arguments.callee, []);
+            })();
+        },
+        ar: [],
+    });
+    oP.AddZombiesFlag();
+});
+
 				SetVisible($("dFlagMeterContent"));
 			});
 		},
