@@ -173,7 +173,7 @@ oS.Init(
 									}
 								);
 							}
-							oSym.addTask(600, arguments.callee, []);
+							oSym.addTask(300, arguments.callee, []);
 						})();
 						(function () {
 							var b = ArCard.length;
