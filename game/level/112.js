@@ -147,14 +147,8 @@ oS.Init(
 							var a = ArCard.length;
 							if (a < 10) {
 								var c = oS.PName;
-								var b =
-									oP.FlagZombies < 6
-										? Math.floor(1 + Math.random() * 10) < 4
-											? 1
-											: Math.floor(Math.random() * c.length)
-										: Math.floor(1 + Math.random() * 10) < 3
-											? 0
-											: Math.floor(Math.random() * c.length);
+								var b = Math.random() < 0.6 ? c.indexOf(oFlowerPot) : Math.floor(Math.random() * c.length);
+									
 								var e = c[b];
 								var d = e.prototype;
 								var f = "dCard" + Math.random();
@@ -177,7 +171,7 @@ oS.Init(
 									}
 								);
 							}
-							oSym.addTask(600, arguments.callee, []);
+							oSym.addTask(200, arguments.callee, []);
 						})();
 						(function () {
 							var b = ArCard.length;
