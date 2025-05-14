@@ -147,7 +147,7 @@ oS.Init(
 							var a = ArCard.length;
 							if (a < 10) {
 								var c = oS.PName;
-								var b = Math.random() < 0.6 ? c.indexOf(oFlowerPot) : Math.floor(Math.random() * c.length);
+								var b = Math.random() < 0.4 ? c.indexOf(oFlowerPot) : Math.floor(Math.random() * c.length);
 									
 								var e = c[b];
 								var d = e.prototype;
