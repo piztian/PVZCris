@@ -1,6 +1,6 @@
 oS.Init(
 	{
-		PName: [oFlowerPot, oGatlingPea, oRepeater, oSpikeweed],
+		PName: [oFlowerPot, oGatlingPea, oRepeater, oTenManNut],
 		ZName: [oCZombie, oCZombie2, oCZombie3, oCBucketheadZombie, oEunZombie, oCConeheadZombie, othugZombie, oZZ, oEmperor],
 		PicArr: ["images/interface/backgroundX4.jpg"],
 		LF: [0, 3, 0, 3, 0, 3, 0],
