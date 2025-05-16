@@ -290,7 +290,7 @@ oS.Init(
 		FlagToEnd() {
 			NewImg("imgSF", "images/interface/trophy.png", "left:260px;top:233px", EDAll, {
 				onclick() {
-					SelectModal(112);
+					SelectModal("FB");
 				},
 			});
 			NewImg("PointerUD", "images/interface/PointerDown.gif", "top:185px;left:676px", EDAll);
