@@ -286,6 +286,17 @@ oS.Init(
 					GroundOnmousemove = function () {};
 				})();
 		},
-		ViewPlantTitle(a) {},
+		FlagToMonitor: {
+    			19: [ShowLargeWave, 0],
+    			29: [ShowFinalWave, 0]
+},
+		FlagToEnd() {
+    			NewImg("imgSF", "images/interface/trophy.png", "left:260px;top:233px", EDAll, {
+        			onclick() {
+            			SelectModal(113); // Nivel siguiente
+        },
+    });
+    NewImg("PointerUD", "images/interface/PointerDown.gif", "top:185px;left:676px", EDAll);
+},
 	}
 );
